@@ -1,0 +1,115 @@
+[
+    {
+        "id": "7b83d9e0.217e18",
+        "type": "http in",
+        "z": "61919cd9.337404",
+        "name": "",
+        "url": "/hola",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 134.5,
+        "y": 90,
+        "wires": [
+            [
+                "ec0522c7.c65a3"
+            ]
+        ]
+    },
+    {
+        "id": "6f08cce6.090e44",
+        "type": "http response",
+        "z": "61919cd9.337404",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ec0522c7.c65a3",
+        "type": "template",
+        "z": "61919cd9.337404",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <body>\n       <h1>\n        Hola Clase!\n        </h1> \n    </body>\n</html>",
+        "output": "str",
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "6f08cce6.090e44"
+            ]
+        ]
+    },
+    {
+        "id": "4f3ad1cc.9ab908",
+        "type": "rpi-dht22",
+        "z": "61919cd9.337404",
+        "name": "",
+        "topic": "rpi-dht22",
+        "dht": "11",
+        "pintype": "0",
+        "pin": 4,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "31e8ec58.eb1404",
+                "3b7f4be9.167d5c"
+            ]
+        ]
+    },
+    {
+        "id": "31e8ec58.eb1404",
+        "type": "debug",
+        "z": "61919cd9.337404",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 490,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "35a127e7.619638",
+        "type": "http in",
+        "z": "61919cd9.337404",
+        "name": "",
+        "url": "/temperatura",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "4f3ad1cc.9ab908"
+            ]
+        ]
+    },
+    {
+        "id": "3b7f4be9.167d5c",
+        "type": "template",
+        "z": "61919cd9.337404",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head>\n        <meta http-equiv=\"refresh\" content=\"5; URL=temperatura\">\n    </head>   \n    <body>\n       <h1>\n        Temperatura: {{payload}}\n        </h1> \n    </body>\n</html>",
+        "output": "str",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "6f08cce6.090e44"
+            ]
+        ]
+    }
+]
