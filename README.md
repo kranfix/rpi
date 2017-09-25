@@ -28,3 +28,7 @@ Características:
 # Instalación de Raspbian
 
 Se cuenta con un manual de instalación en el siguiente [link](https://docs.google.com/presentation/d/e/2PACX-1vRwAhSS7ja7HpfZOAeOdVmOMCODBPSEfdPadmOeeO-fZgnz6aIF3JlyAKdT4BKBbBxmpMkPLUBN9vp1/pub?start=false&loop=true&delayms=60000#slide=id.g15b4ecd9fc_0_41).
+
+# Introducción a servidores:
+
+En la siguiente [presentación](https://docs.google.com/presentation/d/e/2PACX-1vR1mOKr3X0gd3kIMwBqkIw36QuHNvhVytn3FAQ3h-Fn_cAcoOyt1rnKUJUC4BFUx2wG-nRUlfME-k-i/pub?start=false&loop=false&delayms=3000) se puede encontrar una introducción a conceptos de domótica e IoT.
